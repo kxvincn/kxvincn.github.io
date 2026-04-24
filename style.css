@@ -197,26 +197,6 @@ nav ul a:hover { color: var(--accent); }
   font-size: 0.95rem;
 }
 
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  list-style: none;
-  margin-top: 1.5rem;
-}
-
-.skills li {
-  background: var(--card);
-  border: 2px solid var(--border);
-  box-shadow: 2px 2px 0 var(--border);
-  padding: 0.25rem 0.75rem;
-  font-size: 0.8rem;
-  color: var(--teal);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
 /* ── Projects ─────────────────────────────────── */
 .projects-grid {
   display: grid;
@@ -278,6 +258,29 @@ nav ul a:hover { color: var(--accent); }
 }
 
 .project-links { display: flex; gap: 0.6rem; }
+
+/* ── Resume ───────────────────────────────────── */
+.resume-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.resume-embed {
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--card);
+  overflow: hidden;
+}
+
+.resume-embed iframe {
+  display: block;
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  border: none;
+}
 
 /* ── Contact ──────────────────────────────────── */
 .contact-container {
