@@ -3,22 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kevin Chen — Portfolio</title>
+  <title>Kevin Chen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- NAV -->
   <nav>
-    <span class="nav-logo">Kevin Chen</span>
+    <a href="#" class="nav-logo">Kevin Chen</a>
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#interests">Interests</a></li>
       <li><a href="#resume">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -27,166 +24,29 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Hi, I'm <span class="accent">Kevin Chen</span></h1>
-      <p class="tagline">Civil Engineering &nbsp;·&nbsp; University of Toronto &nbsp;·&nbsp; Class of 2029</p>
-      <div class="hero-links">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
+      <p class="hero-pre">Civil Engineering · University of Toronto · Year 2</p>
+      <h1>Hi, I'm Kevin!</h1>
+      <p class="hero-sub">Building things that matter — in concrete, code, and community.</p>
+      <div class="hero-cta">
+        <a href="#about" class="btn btn-primary">About Me</a>
         <a href="#contact" class="btn btn-ghost">Get in Touch</a>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section">
+  <section id="about" class="section section-alt">
     <div class="container">
       <h2 class="section-title">About</h2>
       <div class="about-grid">
         <div class="about-img-wrap">
-          <img src="https://placehold.co/320x320/f4a261/1a1008?text=Photo" alt="Profile photo placeholder" />
+          <img src="https://placehold.co/280x280/f1f5f9/94a3b8?text=Photo" alt="Kevin Chen" />
         </div>
         <div class="about-text">
-          <p>I'm a 2nd year Civil Engineering student at the University of Toronto, pursuing a BASc with PEY Co-op (Expected Graduation: May 2029). I'm passionate about structural design, construction, and finding creative solutions to real-world engineering problems.</p>
-          <p>Outside the classroom I compete in design competitions, lead project teams, and am always looking for ways to apply engineering thinking to new challenges.</p>
+          <p>I'm a second-year Civil Engineering student at the University of Toronto with a strong interest in design — where creativity meets technical problem solving. I enjoy working across structural and transportation projects, and am especially drawn to the process of turning ideas into something real while leading and collaborating with a team.</p>
+          <p>As a Construction Specialist on the Seismic Design Team and Team Captain for the 2026 Troitsky Bridge Competition in Montreal, I've developed both my design skills and my ability to lead under pressure. I'm currently an OCS CAD Design Intern at Alstom, gaining hands-on experience with real infrastructure projects and learning how design decisions translate directly into the field.</p>
+          <p>I'm always looking to improve and push myself further, both technically and as a leader. Long term, I want to create work that people can see, use, and genuinely value.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-grid">
-
-        <article class="project-card">
-          <div class="project-img">
-            <img src="https://placehold.co/600x340/f4a261/1a1008?text=Project+1" alt="Project 1 placeholder" />
-          </div>
-          <div class="project-body">
-            <h3>Project One</h3>
-            <p>A short description of what this project does and why it's interesting. Replace with your real project details.</p>
-            <div class="project-tags">
-              <span>React</span><span>Node.js</span><span>MongoDB</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="btn btn-sm">Live Demo</a>
-              <a href="#" class="btn btn-sm btn-ghost">Source</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-img">
-            <img src="https://placehold.co/600x340/2a9d8f/fff8ee?text=Project+2" alt="Project 2 placeholder" />
-          </div>
-          <div class="project-body">
-            <h3>Project Two</h3>
-            <p>A short description of what this project does and why it's interesting. Replace with your real project details.</p>
-            <div class="project-tags">
-              <span>Python</span><span>FastAPI</span><span>PostgreSQL</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="btn btn-sm">Live Demo</a>
-              <a href="#" class="btn btn-sm btn-ghost">Source</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-img">
-            <img src="https://placehold.co/600x340/e76f51/fff8ee?text=Project+3" alt="Project 3 placeholder" />
-          </div>
-          <div class="project-body">
-            <h3>Project Three</h3>
-            <p>A short description of what this project does and why it's interesting. Replace with your real project details.</p>
-            <div class="project-tags">
-              <span>TypeScript</span><span>Next.js</span><span>Tailwind</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="btn btn-sm">Live Demo</a>
-              <a href="#" class="btn btn-sm btn-ghost">Source</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-img">
-            <img src="https://placehold.co/600x340/264653/fff8ee?text=Project+4" alt="Project 4 placeholder" />
-          </div>
-          <div class="project-body">
-            <h3>Project Four</h3>
-            <p>A short description of what this project does and why it's interesting. Replace with your real project details.</p>
-            <div class="project-tags">
-              <span>Go</span><span>Docker</span><span>Redis</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="btn btn-sm">Live Demo</a>
-              <a href="#" class="btn btn-sm btn-ghost">Source</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section">
-    <div class="container">
-      <h2 class="section-title">Experience</h2>
-      <div class="exp-list">
-
-        <article class="exp-card">
-          <div class="exp-header">
-            <div>
-              <h3>Brand Representative</h3>
-              <p class="exp-org">Abercrombie &amp; Fitch &middot; Toronto, ON</p>
-            </div>
-            <span class="exp-date">Jul 2024 – Apr 2025</span>
-          </div>
-          <ul class="exp-bullets">
-            <li>Assisted customers, managed fitting rooms, and maintained store presentation at a flagship location.</li>
-            <li>Consistently encouraged 60%+ of customers to join the loyalty program, boosting customer retention.</li>
-          </ul>
-          <div class="project-tags">
-            <span>Customer Service</span><span>Retail</span><span>Sales</span>
-          </div>
-        </article>
-
-        <article class="exp-card">
-          <div class="exp-header">
-            <div>
-              <h3>E-commerce Specialist Co-op</h3>
-              <p class="exp-org">Relocation Vintage &middot; Toronto, ON</p>
-            </div>
-            <span class="exp-date">Mar 2023 – Jun 2023</span>
-          </div>
-          <ul class="exp-bullets">
-            <li>Managed Shopify inventory system for 200+ items, reducing data errors and duplicate listings by ~25%.</li>
-            <li>Standardized product listing workflows by creating consistent tagging and SKU structures.</li>
-          </ul>
-          <div class="project-tags">
-            <span>Shopify</span><span>E-commerce</span><span>Inventory Management</span>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- INTERESTS -->
-  <section id="interests" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Interests</h2>
-      <div class="interests-grid">
-        <div class="interest-card">Astronomy</div>
-        <div class="interest-card">Badminton</div>
-        <div class="interest-card">Biking</div>
-        <div class="interest-card">Cooking</div>
-        <div class="interest-card">Gaming</div>
-        <div class="interest-card">Fashion</div>
-        <div class="interest-card">Thrifting</div>
-        <div class="interest-card">Volunteering</div>
       </div>
     </div>
   </section>
@@ -197,7 +57,7 @@
       <h2 class="section-title">Resume</h2>
       <div class="resume-actions">
         <a href="Resume%20-%20Kevin%20Chen.pdf" download class="btn btn-primary">Download PDF</a>
-        <a href="Resume%20-%20Kevin%20Chen.pdf" target="_blank" class="btn btn-ghost">Open in Tab</a>
+        <a href="Resume%20-%20Kevin%20Chen.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Open in Tab ↗</a>
       </div>
       <div class="resume-embed">
         <iframe src="Resume%20-%20Kevin%20Chen.pdf" title="Kevin Chen Resume"></iframe>
@@ -206,20 +66,26 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container contact-container">
-      <h2 class="section-title">Get in Touch</h2>
-      <p class="contact-sub">Have a project in mind or just want to say hi? My inbox is open.</p>
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-sub">I'm always open to new opportunities and conversations — feel free to reach out.</p>
       <div class="contact-btns">
-        <a href="mailto:kxvincn@gmail.com" class="btn btn-primary btn-lg">Say Hello</a>
-        <a href="https://www.linkedin.com/in/kevincn02" target="_blank" class="btn btn-ghost btn-lg">LinkedIn</a>
+        <a href="mailto:kxvincn@gmail.com" class="btn btn-primary btn-lg">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          kxvincn@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/kevincn02" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>Built by Kevin Chen · <a href="https://github.com/kxvincn/kxvincn.github.io" target="_blank">Source</a></p>
+    <p>Kevin Chen &middot; 2026</p>
   </footer>
 
 </body>
