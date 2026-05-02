@@ -142,12 +142,14 @@ nav ul a:hover::after { width: 100%; }
 
 /* ── Hero ─────────────────────────────────────── */
 .hero {
+  position: relative;
   min-height: calc(100vh - 58px);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 4rem 2rem;
+  overflow: hidden;
 }
 
 .hero-pre {
@@ -197,16 +199,29 @@ nav ul a:hover::after { width: 100%; }
   animation: fadeInUp 0.75s ease 0.32s both;
 }
 
-@media (max-width: 540px) {
-  .hero-sub { white-space: normal; max-width: 300px; margin-left: auto; margin-right: auto; }
-}
-
 .hero-cta {
   display: flex;
   gap: 0.75rem;
   justify-content: center;
   flex-wrap: wrap;
   animation: fadeInUp 0.75s ease 0.46s both;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--muted);
+  transition: color var(--ease), opacity var(--ease);
+  animation: bounceY 2.2s ease-in-out infinite, fadeInUp 0.75s ease 0.9s both;
+}
+
+.scroll-indicator:hover { color: var(--accent); }
+
+@keyframes bounceY {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(7px); }
 }
 
 /* ── Buttons ──────────────────────────────────── */

@@ -27,12 +27,17 @@
     <div class="hero-content">
       <p class="hero-pre">Civil Engineering · University of Toronto · Year 2</p>
       <h1>Hi, I'm Kevin!</h1>
-      <p class="hero-sub">Navigating the intersection of engineering and design.</p>
+      <p class="hero-sub">Welcome to my personal website.</p>
       <div class="hero-cta">
         <a href="#about" class="btn btn-primary">About Me</a>
         <a href="#contact" class="btn btn-ghost">Get in Touch</a>
       </div>
     </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </a>
   </section>
 
   <!-- ABOUT -->
@@ -157,20 +162,37 @@
 
   <script>
     (function () {
-      // Hide/show nav on scroll
-      var nav = document.querySelector('nav');
-      var lastY = 0;
-      window.addEventListener('scroll', function () {
-        var y = window.scrollY;
-        if (y > lastY && y > 80) {
-          nav.classList.add('nav-hidden');
-        } else {
-          nav.classList.remove('nav-hidden');
-        }
-        lastY = y;
-      }, { passive: true });
+      var nav          = document.querySelector('nav');
+      var heroContent  = document.querySelector('.hero-content');
+      var scrollInd    = document.querySelector('.scroll-indicator');
+      var heroSection  = document.querySelector('.hero');
+      var lastY        = 0;
 
-      // Scroll reveal
+      function onScroll() {
+        var y = window.scrollY;
+
+        // Hide/show nav
+        if (y > lastY && y > 80) { nav.classList.add('nav-hidden'); }
+        else { nav.classList.remove('nav-hidden'); }
+        lastY = y;
+
+        // Hero parallax — content drifts up and fades as you scroll away
+        if (heroSection) {
+          var heroH = heroSection.offsetHeight;
+          var ratio = Math.min(y / heroH, 1);
+          if (heroContent) {
+            heroContent.style.transform = 'translateY(' + (y * 0.28) + 'px)';
+            heroContent.style.opacity   = String(Math.max(0, 1 - ratio * 1.6));
+          }
+          if (scrollInd) {
+            scrollInd.style.opacity = String(Math.max(0, 1 - ratio * 4));
+          }
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // Scroll reveal (Intersection Observer)
       var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
