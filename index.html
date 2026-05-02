@@ -16,6 +16,7 @@
     <a href="#" class="nav-logo">Kevin Chen</a>
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#resume">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -40,13 +41,65 @@
       <h2 class="section-title">About</h2>
       <div class="about-grid">
         <div class="about-img-wrap">
-          <img src="https://placehold.co/280x280/f1f5f9/94a3b8?text=Photo" alt="Kevin Chen" />
+          <img src="https://placehold.co/280x280/1d1810/ffd700?text=Photo" alt="Kevin Chen" />
         </div>
         <div class="about-text">
           <p>I'm a second-year Civil Engineering student at the University of Toronto with a strong interest in design — where creativity meets technical problem solving. I enjoy working across structural and transportation projects, and am especially drawn to the process of turning ideas into something real while leading and collaborating with a team.</p>
           <p>As a Construction Specialist on the Seismic Design Team and Team Captain for the 2026 Troitsky Bridge Competition in Montreal, I've developed both my design skills and my ability to lead under pressure. I'm currently an OCS CAD Design Intern at Alstom, gaining hands-on experience with real infrastructure projects and learning how design decisions translate directly into the field.</p>
           <p>I'm always looking to improve and push myself further, both technically and as a leader. Long term, I want to create work that people can see, use, and genuinely value.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+
+        <a href="#" class="project-card">
+          <div class="project-card-img">
+            <img src="https://placehold.co/600x320/1d1810/ffd700?text=Project+1" alt="Project 1" />
+          </div>
+          <div class="project-card-body">
+            <h4>Project One</h4>
+            <p class="project-card-org">Personal Project &middot; 2024</p>
+            <p>A short description of what this project does and why it's interesting. Replace with your real project details.</p>
+            <div class="project-tags">
+              <span>Python</span><span>Data Analysis</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="project-card">
+          <div class="project-card-img">
+            <img src="https://placehold.co/600x320/1d1810/ffd700?text=Project+2" alt="Project 2" />
+          </div>
+          <div class="project-card-body">
+            <h4>Project Two</h4>
+            <p class="project-card-org">Course Project &middot; University of Toronto &middot; 2024</p>
+            <p>A short description of what this project does and why it's interesting. Replace with your real project details.</p>
+            <div class="project-tags">
+              <span>AutoCAD</span><span>Structural Analysis</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="project-card">
+          <div class="project-card-img">
+            <img src="https://placehold.co/600x320/1d1810/ffd700?text=Project+3" alt="Project 3" />
+          </div>
+          <div class="project-card-body">
+            <h4>Project Three</h4>
+            <p class="project-card-org">Personal Project &middot; 2023</p>
+            <p>A short description of what this project does and why it's interesting. Replace with your real project details.</p>
+            <div class="project-tags">
+              <span>CAD</span><span>3D Modeling</span>
+            </div>
+          </div>
+        </a>
+
       </div>
     </div>
   </section>
@@ -88,5 +141,20 @@
     <p>Kevin Chen &middot; 2026</p>
   </footer>
 
+  <script>
+    (function () {
+      var nav = document.querySelector('nav');
+      var lastY = 0;
+      window.addEventListener('scroll', function () {
+        var y = window.scrollY;
+        if (y > lastY && y > 80) {
+          nav.classList.add('nav-hidden');
+        } else {
+          nav.classList.remove('nav-hidden');
+        }
+        lastY = y;
+      }, { passive: true });
+    }());
+  </script>
 </body>
 </html>
