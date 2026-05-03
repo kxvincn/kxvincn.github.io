@@ -68,20 +68,24 @@ img { display: block; max-width: 100%; }
 }
 
 /* ── Pin scroll ───────────────────────────────── */
-/* Extra wrapper height lets the sticky section hold position while items animate in */
+/* Wrapper height is set by JS (sectionHeight + extraH) so the sticky section
+   holds position while reveal animations complete. */
 .pin-section {
   position: sticky;
   top: var(--nav-h, 58px);
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .pin-item {
   opacity: 0;
-  transform: translateY(26px) scale(0.97);
-  transition: opacity 0.52s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              transform 0.52s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateY(28px) scale(0.96);
+  transition: opacity 0.55s ease, transform 0.55s ease;
 }
+
+/* Stagger each item by its order */
+.pin-item[data-pin-order="1"] { transition-delay: 0.12s; }
+.pin-item[data-pin-order="2"] { transition-delay: 0.24s; }
+.pin-item[data-pin-order="3"] { transition-delay: 0.36s; }
+.pin-item[data-pin-order="4"] { transition-delay: 0.48s; }
 
 .pin-item.pin-visible {
   opacity: 1;

@@ -177,8 +177,9 @@
       document.documentElement.style.setProperty('--nav-h', navH + 'px');
 
       // ── Pin-scroll system ──────────────────────────
-      // Each .pin-wrap has extra height so its sticky .pin-section stays
-      // fixed while scroll progress drives element reveals.
+      // Each .pin-wrap is taller than its section so the sticky .pin-section
+      // holds on screen while reveal animations play out. Items all trigger at
+      // once via CSS transition-delay when the section first locks sticky.
       var pinData = [];
 
       function initPins() {
@@ -187,33 +188,25 @@
         pinData = [];
 
         document.querySelectorAll('.pin-wrap').forEach(function (wrap) {
-          var section  = wrap.querySelector('.pin-section');
-          var items    = Array.from(wrap.querySelectorAll('[data-pin-order]'))
-            .sort(function (a, b) { return +a.dataset.pinOrder - +b.dataset.pinOrder; });
-          var maxOrder = items.length ? +items[items.length - 1].dataset.pinOrder : 0;
-          // 220 px of scroll per step gives a comfortable reveal pace
-          var extraH   = (maxOrder + 1) * 220;
-
+          var section = wrap.querySelector('.pin-section');
+          // Hold section sticky for 1 full viewport of extra scroll — enough
+          // for all staggered animations (~1.2 s) to finish before it leaves.
+          var extraH = window.innerHeight;
           wrap.style.height = (section.offsetHeight + extraH) + 'px';
-          pinData.push({ wrap: wrap, items: items, maxOrder: maxOrder, extraH: extraH });
+          pinData.push({ wrap: wrap, section: section, triggered: false });
         });
       }
 
       function updatePins() {
         pinData.forEach(function (pd) {
-          var top      = pd.wrap.getBoundingClientRect().top;
-          // scrolled = 0 when section just hits sticky threshold; extraH when pin releases
-          var scrolled = navH - top;
-          var progress = Math.max(0, Math.min(1, scrolled / pd.extraH));
-
-          pd.items.forEach(function (item) {
-            var order     = +item.dataset.pinOrder;
-            // Spread reveals evenly over first 85% of the pin scroll range
-            var threshold = pd.maxOrder > 0 ? (order / pd.maxOrder) * 0.85 : 0;
-            if (progress >= threshold) {
+          if (pd.triggered) return;
+          // Fire once the wrapper's top edge has reached the nav (section is sticky)
+          if (pd.wrap.getBoundingClientRect().top <= navH) {
+            pd.triggered = true;
+            pd.section.querySelectorAll('.pin-item').forEach(function (item) {
               item.classList.add('pin-visible');
-            }
-          });
+            });
+          }
         });
       }
 
