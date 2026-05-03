@@ -40,88 +40,92 @@
     </a>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title reveal">About</h2>
-      <div class="about-grid reveal">
-        <div class="about-img-wrap">
-          <img src="https://placehold.co/280x280/ece4c8/6e5c38?text=Photo" alt="Kevin Chen" />
-        </div>
-        <div class="about-text">
-          <p>I'm a second-year Civil Engineering student at the University of Toronto with a strong interest in design — where creativity meets technical problem solving. I enjoy working across structural and transportation projects, and am especially drawn to the process of turning ideas into something real while leading and collaborating with a team.</p>
-          <p>As a Construction Specialist on the Seismic Design Team and Team Captain for the 2026 Troitsky Bridge Competition in Montreal, I've developed both my design skills and my ability to lead under pressure. I'm currently an OCS CAD Design Intern at Alstom, gaining hands-on experience with real infrastructure projects and learning how design decisions translate directly into the field.</p>
-          <p>I'm always looking to improve and push myself further, both technically and as a leader. Long term, I want to create work that people can see, use, and genuinely value.</p>
+  <!-- ABOUT (pin-wrap gives extra scroll room; section stays sticky while items pop in) -->
+  <div id="about" class="pin-wrap">
+    <section class="section section-alt pin-section">
+      <div class="container">
+        <h2 class="section-title pin-item" data-pin-order="0">About</h2>
+        <div class="about-grid">
+          <div class="about-img-wrap pin-item" data-pin-order="1">
+            <img src="https://placehold.co/280x280/ece4c8/6e5c38?text=Photo" alt="Kevin Chen" />
+          </div>
+          <div class="about-text">
+            <p class="pin-item" data-pin-order="2">I'm a second-year Civil Engineering student at the University of Toronto with a strong interest in design — where creativity meets technical problem solving. I enjoy working across structural and transportation projects, and am especially drawn to the process of turning ideas into something real while leading and collaborating with a team.</p>
+            <p class="pin-item" data-pin-order="3">As a Construction Specialist on the Seismic Design Team and Team Captain for the 2026 Troitsky Bridge Competition in Montreal, I've developed both my design skills and my ability to lead under pressure. I'm currently an OCS CAD Design Intern at Alstom, gaining hands-on experience with real infrastructure projects and learning how design decisions translate directly into the field.</p>
+            <p class="pin-item" data-pin-order="4">I'm always looking to improve and push myself further, both technically and as a leader. Long term, I want to create work that people can see, use, and genuinely value.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-title reveal">Projects</h2>
-      <div class="projects-grid">
+  <!-- PROJECTS (pin-wrap gives extra scroll room; cards pop in one by one) -->
+  <div id="projects" class="pin-wrap">
+    <section class="section pin-section">
+      <div class="container">
+        <h2 class="section-title pin-item" data-pin-order="0">Projects</h2>
+        <div class="projects-grid">
 
-        <a href="projects/project-one.html" class="project-card reveal">
-          <div class="project-card-img">
-            <img src="https://placehold.co/600x320/ece4c8/6e5c38?text=Project+1" alt="Project 1" />
-          </div>
-          <div class="project-card-body">
-            <h4>Project One</h4>
-            <p class="project-card-org">Personal Project &middot; 2024</p>
-            <p>A short description of what this project does and why it's interesting. Replace with your real project details.</p>
-            <div class="project-tags">
-              <span>Python</span><span>Data Analysis</span>
+          <a href="projects/project-one.html" class="project-card pin-item" data-pin-order="1">
+            <div class="project-card-img">
+              <img src="https://placehold.co/600x320/ece4c8/6e5c38?text=Project+1" alt="Project 1" />
             </div>
-          </div>
-        </a>
-
-        <a href="projects/project-two.html" class="project-card reveal">
-          <div class="project-card-img">
-            <img src="https://placehold.co/600x320/ece4c8/6e5c38?text=Project+2" alt="Project 2" />
-          </div>
-          <div class="project-card-body">
-            <h4>Project Two</h4>
-            <p class="project-card-org">Course Project &middot; University of Toronto &middot; 2024</p>
-            <p>A short description of what this project does and why it's interesting. Replace with your real project details.</p>
-            <div class="project-tags">
-              <span>AutoCAD</span><span>Structural Analysis</span>
+            <div class="project-card-body">
+              <h4>Project One</h4>
+              <p class="project-card-org">Personal Project &middot; 2024</p>
+              <p>A short description of what this project does and why it's interesting. Replace with your real project details.</p>
+              <div class="project-tags">
+                <span>Python</span><span>Data Analysis</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <a href="projects/project-three.html" class="project-card reveal">
-          <div class="project-card-img">
-            <img src="https://placehold.co/600x320/ece4c8/6e5c38?text=Project+3" alt="Project 3" />
-          </div>
-          <div class="project-card-body">
-            <h4>Project Three</h4>
-            <p class="project-card-org">Personal Project &middot; 2023</p>
-            <p>A short description of what this project does and why it's interesting. Replace with your real project details.</p>
-            <div class="project-tags">
-              <span>CAD</span><span>3D Modeling</span>
+          <a href="projects/project-two.html" class="project-card pin-item" data-pin-order="2">
+            <div class="project-card-img">
+              <img src="https://placehold.co/600x320/ece4c8/6e5c38?text=Project+2" alt="Project 2" />
             </div>
-          </div>
-        </a>
-
-        <a href="projects/project-four.html" class="project-card reveal">
-          <div class="project-card-img">
-            <img src="https://placehold.co/600x320/ece4c8/6e5c38?text=Project+4" alt="Project 4" />
-          </div>
-          <div class="project-card-body">
-            <h4>Project Four</h4>
-            <p class="project-card-org">Course Project &middot; University of Toronto &middot; 2025</p>
-            <p>A short description of what this project does and why it's interesting. Replace with your real project details.</p>
-            <div class="project-tags">
-              <span>Civil Engineering</span><span>Design</span>
+            <div class="project-card-body">
+              <h4>Project Two</h4>
+              <p class="project-card-org">Course Project &middot; University of Toronto &middot; 2024</p>
+              <p>A short description of what this project does and why it's interesting. Replace with your real project details.</p>
+              <div class="project-tags">
+                <span>AutoCAD</span><span>Structural Analysis</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
 
+          <a href="projects/project-three.html" class="project-card pin-item" data-pin-order="3">
+            <div class="project-card-img">
+              <img src="https://placehold.co/600x320/ece4c8/6e5c38?text=Project+3" alt="Project 3" />
+            </div>
+            <div class="project-card-body">
+              <h4>Project Three</h4>
+              <p class="project-card-org">Personal Project &middot; 2023</p>
+              <p>A short description of what this project does and why it's interesting. Replace with your real project details.</p>
+              <div class="project-tags">
+                <span>CAD</span><span>3D Modeling</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="projects/project-four.html" class="project-card pin-item" data-pin-order="4">
+            <div class="project-card-img">
+              <img src="https://placehold.co/600x320/ece4c8/6e5c38?text=Project+4" alt="Project 4" />
+            </div>
+            <div class="project-card-body">
+              <h4>Project Four</h4>
+              <p class="project-card-org">Course Project &middot; University of Toronto &middot; 2025</p>
+              <p>A short description of what this project does and why it's interesting. Replace with your real project details.</p>
+              <div class="project-tags">
+                <span>Civil Engineering</span><span>Design</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <!-- RESUME -->
   <section id="resume" class="section">
@@ -162,18 +166,64 @@
 
   <script>
     (function () {
-      var nav          = document.querySelector('nav');
-      var heroContent  = document.querySelector('.hero-content');
-      var scrollInd    = document.querySelector('.scroll-indicator');
-      var heroSection  = document.querySelector('.hero');
-      var lastY        = 0;
+      var nav         = document.querySelector('nav');
+      var heroContent = document.querySelector('.hero-content');
+      var scrollInd   = document.querySelector('.scroll-indicator');
+      var heroSection = document.querySelector('.hero');
+      var lastY       = 0;
+      var navH        = nav.offsetHeight;
 
+      // Expose nav height to CSS for sticky offsets
+      document.documentElement.style.setProperty('--nav-h', navH + 'px');
+
+      // ── Pin-scroll system ──────────────────────────
+      // Each .pin-wrap has extra height so its sticky .pin-section stays
+      // fixed while scroll progress drives element reveals.
+      var pinData = [];
+
+      function initPins() {
+        navH = nav.offsetHeight;
+        document.documentElement.style.setProperty('--nav-h', navH + 'px');
+        pinData = [];
+
+        document.querySelectorAll('.pin-wrap').forEach(function (wrap) {
+          var section  = wrap.querySelector('.pin-section');
+          var items    = Array.from(wrap.querySelectorAll('[data-pin-order]'))
+            .sort(function (a, b) { return +a.dataset.pinOrder - +b.dataset.pinOrder; });
+          var maxOrder = items.length ? +items[items.length - 1].dataset.pinOrder : 0;
+          // 220 px of scroll per step gives a comfortable reveal pace
+          var extraH   = (maxOrder + 1) * 220;
+
+          wrap.style.height = (section.offsetHeight + extraH) + 'px';
+          pinData.push({ wrap: wrap, items: items, maxOrder: maxOrder, extraH: extraH });
+        });
+      }
+
+      function updatePins() {
+        pinData.forEach(function (pd) {
+          var top      = pd.wrap.getBoundingClientRect().top;
+          // scrolled = 0 when section just hits sticky threshold; extraH when pin releases
+          var scrolled = navH - top;
+          var progress = Math.max(0, Math.min(1, scrolled / pd.extraH));
+
+          pd.items.forEach(function (item) {
+            var order     = +item.dataset.pinOrder;
+            // Spread reveals evenly over first 85% of the pin scroll range
+            var threshold = pd.maxOrder > 0 ? (order / pd.maxOrder) * 0.85 : 0;
+            if (progress >= threshold) {
+              item.classList.add('pin-visible');
+            }
+          });
+        });
+      }
+
+      // ── Main scroll handler ────────────────────────
       function onScroll() {
         var y = window.scrollY;
 
-        // Hide/show nav
+        // Hide/show nav on direction change
         if (y > lastY && y > 80) { nav.classList.add('nav-hidden'); }
-        else { nav.classList.remove('nav-hidden'); }
+        else                     { nav.classList.remove('nav-hidden'); }
         lastY = y;
 
         // Hero parallax — content drifts up and fades as you scroll away
@@ -188,11 +238,14 @@
             scrollInd.style.opacity = String(Math.max(0, 1 - ratio * 4));
           }
         }
+
+        updatePins();
       }
 
       window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', function () { initPins(); updatePins(); });
 
-      // Scroll reveal (Intersection Observer)
+      // ── Scroll reveal for non-pin sections ────────
       var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
@@ -205,6 +258,10 @@
       document.querySelectorAll('.reveal').forEach(function (el) {
         observer.observe(el);
       });
+
+      // Init
+      initPins();
+      updatePins();
     }());
   </script>
 </body>

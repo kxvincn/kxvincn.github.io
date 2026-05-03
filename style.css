@@ -67,10 +67,28 @@ img { display: block; max-width: 100%; }
   transform: translateY(0);
 }
 
-/* Stagger project cards */
-.projects-grid .project-card:nth-child(2) { transition-delay: 0.10s; }
-.projects-grid .project-card:nth-child(3) { transition-delay: 0.20s; }
-.projects-grid .project-card:nth-child(4) { transition-delay: 0.30s; }
+/* ── Pin scroll ───────────────────────────────── */
+/* Extra wrapper height lets the sticky section hold position while items animate in */
+.pin-section {
+  position: sticky;
+  top: var(--nav-h, 58px);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.pin-item {
+  opacity: 0;
+  transform: translateY(26px) scale(0.97);
+  transition: opacity 0.52s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.52s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.pin-item.pin-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.section-title.pin-visible::after { width: 3rem; }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
